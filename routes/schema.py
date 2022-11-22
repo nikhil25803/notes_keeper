@@ -5,6 +5,7 @@ from typing import List
 
 class UserBase(BaseModel):
     name: str
+    username:str
     email: str
     password: str
 
@@ -18,6 +19,7 @@ class Notes(BaseModel):
 
 class UserDisplay(BaseModel):
     name: str
+    username:str
     email: str
     posts:List[Notes]
 
@@ -39,3 +41,8 @@ class NotesDisplay(BaseModel):
 
     class Config:
         orm_mode = True
+
+class UserAuth(BaseModel):
+    id:int
+    username:str
+    email:str

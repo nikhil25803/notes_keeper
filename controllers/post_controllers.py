@@ -4,14 +4,12 @@ from db.models import NotesDB
 from datetime import datetime
 
 
-
-
-def create_post(db:Session, request:NotesBase):
+def create_post(db: Session, request: NotesBase):
     new_post = NotesDB(
-        title = request.title,
-        description = request.description,
-        user_id = request.user_id,
-        created_at = datetime.now()
+        title=request.title,
+        description=request.description,
+        user_id=request.user_id,
+        created_at=datetime.now(),
     )
     db.add(new_post)
     db.commit()
