@@ -22,5 +22,5 @@ class NotesDB(Base):
     title = Column(String)
     description = Column(String)
     created_at = Column(DateTime)
-    user_id = Column(Integer, ForeignKey("user.id"))
+    user_id = Column(String, ForeignKey("user.id"))
     user = relationship("UserDb", back_populates="posts")

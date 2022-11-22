@@ -42,6 +42,7 @@ def get_current_user(
     except JWTError:
         raise credentials_exception
     user = user_controller.get_user(db, username=username)
+    print(user)
     if user is None:
         raise credentials_exception
     return user

@@ -30,7 +30,7 @@ class UserDisplay(BaseModel):
 class NotesBase(BaseModel):
     title: str
     description: str
-    user_id: int
+    user_id:int
 
 
 class NotesDisplay(BaseModel):

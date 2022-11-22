@@ -17,4 +17,5 @@ app.include_router(notes_route.router)
 app.include_router(authentication.router)
 
 
+
 models.Base.metadata.create_all(engine)
