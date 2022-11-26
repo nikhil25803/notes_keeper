@@ -26,6 +26,10 @@ class UserDisplay(BaseModel):
     class Config:
         orm_mode = True
 
+        
+class NotesUpdate(BaseModel):
+    title:str
+    description: str
 
 class NotesBase(BaseModel):
     title: str
@@ -41,6 +45,8 @@ class NotesDisplay(BaseModel):
 
     class Config:
         orm_mode = True
+
+
 
 class UserAuth(BaseModel):
     id:int
