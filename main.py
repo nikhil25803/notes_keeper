@@ -4,8 +4,9 @@ from db.database import engine
 from routes import users_route, notes_route
 from auth import authentication
 
-app = FastAPI()
-
+app = FastAPI(
+    "title":"A note keeping web API"
+)
 
 @app.get("/")
 def index():
